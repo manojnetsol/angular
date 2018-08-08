@@ -3987,3 +3987,14 @@ Copyright (c) 2015 Daniel Eden
     display: none;
   }
 }
+
+.has-error {border-color: #a94442;}
+.invalid-feedback {
+    width: 100%;
+    font-size: 80%;
+    color: #dc3545;
+}
+.form-control.is-invalid, .was-validated .custom-select:invalid, .was-validated .form-control:invalid {
+  border-color: #dc3545;
+  border-radius: .25rem;
+}

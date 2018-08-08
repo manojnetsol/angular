@@ -13,23 +13,22 @@
                               <th *ngFor="let head of tableHead">{{ head | uppercase}}</th>
                           </tr>
                       </thead>
+                      
                       <tbody>
-                           <tr *ngFor="let product of products">
-                              <td *ngIf="product.id%2 == 0" appHighlight>
-                                  {{product.id}}
-                              </td>
-                              <td *ngIf="product.id%2 == 1">
-                                    {{product.id}}
-                              </td>
-                              <td>{{product.name}}</td>
-                              <td>{{product.price | currency}}</td>
-                              <td>{{product.created_at | date}}</td>
-                          </tr> 
-                          <ng-template #highlight>{{product.id}}</ng-template>
-                      </tbody>
+                        <tr *ngFor="let prod of items | async">
+                           <td>{{prod.id}}</td>
+                           <td>{{prod.name}}</td>
+                           <td>{{prod.price | currency}}</td>
+                           <td>{{prod.weight}}</td>
+                           <td><a (click) = "editProduct()" href="">edit</a> | <a (click) = "deleteProduct()" href="">delete</a></td>
+                       </tr> 
+                       <ng-template #highlight>{{prod.id}}</ng-template>
+                   </tbody>
+
                   </table>
               </div>
           </div>
       </div>
+      <button  class="btn btn-info btn-fill btn-wd">Add New Record</button>
   </div>
 </div>

@@ -1,6 +1,9 @@
 export class Products {
-    id: number;
+    id?: string;
     name: String;
     price: number;
-    created_at : string;
+    description : string;
+    weight: number;
+    status:string;
+    stock:number;
 }

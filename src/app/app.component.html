@@ -10,14 +10,14 @@
 
 
 <div class="wrapper">
-  <div class="sidebar">
-      <app-sidbar></app-sidbar>
+  <div class="sidebar" *ngIf="checkLoggedIn()">
+    <app-sidbar ></app-sidbar>
   </div>
   <div class="main-panel">
-    <app-header></app-header>
+    <app-header *ngIf="checkLoggedIn()"></app-header>
       <div class="content">
         <router-outlet></router-outlet>
       </div>
-      <app-footer></app-footer>
+      <app-footer *ngIf="checkLoggedIn()"></app-footer>
   </div>
 </div>
