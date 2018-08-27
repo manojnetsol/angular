@@ -22,6 +22,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule} from 'angularfire2/database';
 import { environment } from '../environments/environment';
 import { LoginComponent } from './users/login/login.component';
+import { AddproductComponent } from './products/addproduct/addproduct.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LoginComponent } from './users/login/login.component';
     UserlistComponent,
     ContactsComponent,
     PageNotFoundComponentComponent,
-    LoginComponent
+    LoginComponent,
+    AddproductComponent
   ],
   imports: [
     BrowserModule,

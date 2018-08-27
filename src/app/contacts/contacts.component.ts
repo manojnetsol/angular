@@ -19,8 +19,7 @@ export class ContactsComponent implements OnInit {
   msg :string;
   contacts: Observable<any[]>;
 
-  constructor(private afauth: AngularFireAuth, private db: AngularFirestore) { 
-    
+  constructor(private afauth: AngularFireAuth, private db: AngularFirestore) {
   }
 
   ngOnInit() {
@@ -28,7 +27,5 @@ export class ContactsComponent implements OnInit {
   } 
 
   processForm() { 
-      
   }
-
 }

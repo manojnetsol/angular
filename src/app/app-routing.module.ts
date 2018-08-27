@@ -7,6 +7,7 @@ import {UserlistComponent} from './users/userlist/userlist.component';
 import {ContactsComponent} from './contacts/contacts.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
 import { LoginComponent } from './users/login/login.component';
+import {AddproductComponent} from './products/addproduct/addproduct.component';
 import { AuthGuard } from './auth.guard';
  
 const routes: Routes = [
@@ -16,6 +17,8 @@ const routes: Routes = [
   { path: 'productlist', component: ListComponent, canActivate:[AuthGuard] },
   { path: 'userlist', component:UserlistComponent, canActivate:[AuthGuard] },
   { path: 'contactus', component:ContactsComponent,canActivate:[AuthGuard] },
+  { path : 'addproduct', component:AddproductComponent, canActivate:[AuthGuard]},
+  { path : 'editproduct/:id', component:AddproductComponent, canActivate:[AuthGuard]},
   { path: '**', component:PageNotFoundComponentComponent}
 ];
  

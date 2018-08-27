@@ -15,12 +15,12 @@
                       </thead>
                       
                       <tbody>
-                        <tr *ngFor="let prod of items | async">
+                        <tr *ngFor="let prod of productsData">
                            <td>{{prod.id}}</td>
-                           <td>{{prod.name}}</td>
-                           <td>{{prod.price | currency}}</td>
-                           <td>{{prod.weight}}</td>
-                           <td><a (click) = "editProduct()" href="">edit</a> | <a (click) = "deleteProduct()" href="">delete</a></td>
+                           <td>{{prod.data.name}}</td>
+                           <td>{{prod.data.price | currency}}</td>
+                           <td>{{prod.data.weight}}</td>
+                           <td><a routerLink="/editproduct/{{prod.id}}" >edit</a> | <a (click) = "deleteProduct(prod.id)" href="javascript:void(0);">delete</a></td>
                        </tr> 
                        <ng-template #highlight>{{prod.id}}</ng-template>
                    </tbody>
@@ -29,6 +29,6 @@
               </div>
           </div>
       </div>
-      <button  class="btn btn-info btn-fill btn-wd">Add New Record</button>
+      <button class="btn btn-info btn-fill btn-wd" (click)="addProduct()">Add New Record</button>
   </div>
 </div>
